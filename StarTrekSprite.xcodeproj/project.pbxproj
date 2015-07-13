@@ -1,0 +1,430 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		8A861B891B54683200AA7CF3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A861B881B54683200AA7CF3 /* AppDelegate.swift */; };
+		8A861B8B1B54683200AA7CF3 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 8A861B8A1B54683200AA7CF3 /* GameScene.sks */; };
+		8A861B8D1B54683200AA7CF3 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A861B8C1B54683200AA7CF3 /* GameScene.swift */; };
+		8A861B8F1B54683200AA7CF3 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A861B8E1B54683200AA7CF3 /* GameViewController.swift */; };
+		8A861B921B54683200AA7CF3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A861B901B54683200AA7CF3 /* Main.storyboard */; };
+		8A861B941B54683200AA7CF3 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8A861B931B54683200AA7CF3 /* Images.xcassets */; };
+		8A861B971B54683200AA7CF3 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8A861B951B54683200AA7CF3 /* LaunchScreen.xib */; };
+		8A861BA31B54683200AA7CF3 /* StarTrekSpriteTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A861BA21B54683200AA7CF3 /* StarTrekSpriteTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		8A861B9D1B54683200AA7CF3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8A861B7B1B54683200AA7CF3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8A861B821B54683200AA7CF3;
+			remoteInfo = StarTrekSprite;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		8A861B831B54683200AA7CF3 /* StarTrekSprite.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StarTrekSprite.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8A861B871B54683200AA7CF3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8A861B881B54683200AA7CF3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		8A861B8A1B54683200AA7CF3 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
+		8A861B8C1B54683200AA7CF3 /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
+		8A861B8E1B54683200AA7CF3 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
+		8A861B911B54683200AA7CF3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		8A861B931B54683200AA7CF3 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		8A861B961B54683200AA7CF3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		8A861B9C1B54683200AA7CF3 /* StarTrekSpriteTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StarTrekSpriteTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		8A861BA11B54683200AA7CF3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8A861BA21B54683200AA7CF3 /* StarTrekSpriteTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarTrekSpriteTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8A861B801B54683200AA7CF3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8A861B991B54683200AA7CF3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		8A861B7A1B54683200AA7CF3 = {
+			isa = PBXGroup;
+			children = (
+				8A861B851B54683200AA7CF3 /* StarTrekSprite */,
+				8A861B9F1B54683200AA7CF3 /* StarTrekSpriteTests */,
+				8A861B841B54683200AA7CF3 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		8A861B841B54683200AA7CF3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8A861B831B54683200AA7CF3 /* StarTrekSprite.app */,
+				8A861B9C1B54683200AA7CF3 /* StarTrekSpriteTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8A861B851B54683200AA7CF3 /* StarTrekSprite */ = {
+			isa = PBXGroup;
+			children = (
+				8A861B881B54683200AA7CF3 /* AppDelegate.swift */,
+				8A861B8A1B54683200AA7CF3 /* GameScene.sks */,
+				8A861B8C1B54683200AA7CF3 /* GameScene.swift */,
+				8A861B8E1B54683200AA7CF3 /* GameViewController.swift */,
+				8A861B901B54683200AA7CF3 /* Main.storyboard */,
+				8A861B931B54683200AA7CF3 /* Images.xcassets */,
+				8A861B951B54683200AA7CF3 /* LaunchScreen.xib */,
+				8A861B861B54683200AA7CF3 /* Supporting Files */,
+			);
+			path = StarTrekSprite;
+			sourceTree = "<group>";
+		};
+		8A861B861B54683200AA7CF3 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				8A861B871B54683200AA7CF3 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		8A861B9F1B54683200AA7CF3 /* StarTrekSpriteTests */ = {
+			isa = PBXGroup;
+			children = (
+				8A861BA21B54683200AA7CF3 /* StarTrekSpriteTests.swift */,
+				8A861BA01B54683200AA7CF3 /* Supporting Files */,
+			);
+			path = StarTrekSpriteTests;
+			sourceTree = "<group>";
+		};
+		8A861BA01B54683200AA7CF3 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				8A861BA11B54683200AA7CF3 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8A861B821B54683200AA7CF3 /* StarTrekSprite */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8A861BA61B54683200AA7CF3 /* Build configuration list for PBXNativeTarget "StarTrekSprite" */;
+			buildPhases = (
+				8A861B7F1B54683200AA7CF3 /* Sources */,
+				8A861B801B54683200AA7CF3 /* Frameworks */,
+				8A861B811B54683200AA7CF3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = StarTrekSprite;
+			productName = StarTrekSprite;
+			productReference = 8A861B831B54683200AA7CF3 /* StarTrekSprite.app */;
+			productType = "com.apple.product-type.application";
+		};
+		8A861B9B1B54683200AA7CF3 /* StarTrekSpriteTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8A861BA91B54683200AA7CF3 /* Build configuration list for PBXNativeTarget "StarTrekSpriteTests" */;
+			buildPhases = (
+				8A861B981B54683200AA7CF3 /* Sources */,
+				8A861B991B54683200AA7CF3 /* Frameworks */,
+				8A861B9A1B54683200AA7CF3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8A861B9E1B54683200AA7CF3 /* PBXTargetDependency */,
+			);
+			name = StarTrekSpriteTests;
+			productName = StarTrekSpriteTests;
+			productReference = 8A861B9C1B54683200AA7CF3 /* StarTrekSpriteTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		8A861B7B1B54683200AA7CF3 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0610;
+				ORGANIZATIONNAME = SimScript;
+				TargetAttributes = {
+					8A861B821B54683200AA7CF3 = {
+						CreatedOnToolsVersion = 6.1.1;
+					};
+					8A861B9B1B54683200AA7CF3 = {
+						CreatedOnToolsVersion = 6.1.1;
+						TestTargetID = 8A861B821B54683200AA7CF3;
+					};
+				};
+			};
+			buildConfigurationList = 8A861B7E1B54683200AA7CF3 /* Build configuration list for PBXProject "StarTrekSprite" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 8A861B7A1B54683200AA7CF3;
+			productRefGroup = 8A861B841B54683200AA7CF3 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8A861B821B54683200AA7CF3 /* StarTrekSprite */,
+				8A861B9B1B54683200AA7CF3 /* StarTrekSpriteTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8A861B811B54683200AA7CF3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8A861B971B54683200AA7CF3 /* LaunchScreen.xib in Resources */,
+				8A861B941B54683200AA7CF3 /* Images.xcassets in Resources */,
+				8A861B8B1B54683200AA7CF3 /* GameScene.sks in Resources */,
+				8A861B921B54683200AA7CF3 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8A861B9A1B54683200AA7CF3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8A861B7F1B54683200AA7CF3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8A861B8D1B54683200AA7CF3 /* GameScene.swift in Sources */,
+				8A861B8F1B54683200AA7CF3 /* GameViewController.swift in Sources */,
+				8A861B891B54683200AA7CF3 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8A861B981B54683200AA7CF3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8A861BA31B54683200AA7CF3 /* StarTrekSpriteTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		8A861B9E1B54683200AA7CF3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8A861B821B54683200AA7CF3 /* StarTrekSprite */;
+			targetProxy = 8A861B9D1B54683200AA7CF3 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		8A861B901B54683200AA7CF3 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8A861B911B54683200AA7CF3 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		8A861B951B54683200AA7CF3 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8A861B961B54683200AA7CF3 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		8A861BA41B54683200AA7CF3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		8A861BA51B54683200AA7CF3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		8A861BA71B54683200AA7CF3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = StarTrekSprite/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		8A861BA81B54683200AA7CF3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = StarTrekSprite/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		8A861BAA1B54683200AA7CF3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = StarTrekSpriteTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/StarTrekSprite.app/StarTrekSprite";
+			};
+			name = Debug;
+		};
+		8A861BAB1B54683200AA7CF3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = StarTrekSpriteTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/StarTrekSprite.app/StarTrekSprite";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		8A861B7E1B54683200AA7CF3 /* Build configuration list for PBXProject "StarTrekSprite" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8A861BA41B54683200AA7CF3 /* Debug */,
+				8A861BA51B54683200AA7CF3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8A861BA61B54683200AA7CF3 /* Build configuration list for PBXNativeTarget "StarTrekSprite" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8A861BA71B54683200AA7CF3 /* Debug */,
+				8A861BA81B54683200AA7CF3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		8A861BA91B54683200AA7CF3 /* Build configuration list for PBXNativeTarget "StarTrekSpriteTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8A861BAA1B54683200AA7CF3 /* Debug */,
+				8A861BAB1B54683200AA7CF3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 8A861B7B1B54683200AA7CF3 /* Project object */;
+}
