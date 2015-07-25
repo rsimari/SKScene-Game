@@ -32,29 +32,59 @@ class Human : SKScene, SKPhysicsContactDelegate, Player {
     var life : Double = 10
     var body = SKNode()
     var shape = SKShapeNode(rectOfSize: CGSize(width: 30, height: 30))
+    var color = SKColor.whiteColor()
+    func jump() {
+        self.physicsBody?.applyImpulse(CGVectorMake(0.0, 15.0))
+    }
+    func moveRight() {
+        let moveR = SKAction.moveByX(30, y: 0, duration: 0.5)
+        self.runAction(moveR) // or shape?
+    }
+    func moveLeft() {
+        let moveL = SKAction.moveByX(-30, y: 0, duration: 0.5)
+        self.runAction(moveL)
+    }
     func takeDamage(damage: Double) {
         life-=damage
     }
     var weapon : Weapon = Phaser()
+    func shootWeapon () {
+        weapon.fire()
+    }
 }
 protocol Weapon {
-    func fire(target: Player)
+   // var bullet : SKNode {get}
+    var speedR : CGVector {get}
+    var speedL : CGVector {get}
+    func fire()
+    var damage : Double {get set}
 }
 protocol Player {
     var life : Double {get set}
     var body : SKNode {get}
     var shape : SKShapeNode {get}
+    var color : SKColor {get}
     func takeDamage(damage: Double)
+    func moveRight()
+    func moveLeft()
+    func jump()
 }
 class Phaser : Weapon {
-    func fire(target: Player) {
-        target.takeDamage(1)
+    var bullet = SKNode()
+    var speedR = CGVectorMake(0.3, 0)
+    var speedL = CGVectorMake(-0.3, 0)
+    var damage : Double = 1
+    func fire() {
+        // this has to put a node in the scene which is hard becasue the scene is a different file
+        // I could make the input an SKScene and put self in for the other file
     }
 }
 class Rifle : Weapon {
-    func fire(target: Player) {
-        target.takeDamage(2)
-    }
+    var bullet = SKNode()
+    var speedR = CGVectorMake(5.0,0)
+    var speedL = CGVectorMake(-5.0,0)
+    var damage : Double = 2
+    func fire() {}
 }
 
 
