@@ -9,16 +9,18 @@
 // weapon struct?
 // add life/dmg system and display in label
 // multiple power ups at once? stack them... may need to make them smaller though or side by side (how many?)
-// if buttonLocation = true go to buttonLocation2
+
 // make a deflector shield
 // 10 seconds after power up is removed make another?
 // after you shoot go back to no fill
 // !!!something wrong with the removal of buttons!!!!
 // i cant tell which way im facing bro
-
+// load buttons? have color rise till top and then able to shoot -> if buttonfilled = true -> able to shoot
+// make empty circles above the main UI and have them filled when you pick up a powerup
+// if you get all 3 powerups you can use a huge attack (execute?)
 
 import SpriteKit
-
+/*
 class GameScene: SKScene, SKPhysicsContactDelegate {
     
     struct PhysicsCategory {
@@ -201,7 +203,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         
         // characters
         // human
-        
+        // humanCharacter = Human()
         humanCharacter.position = CGPoint(x: 100,y: 100)
         humanCharacter.physicsBody = SKPhysicsBody(rectangleOfSize: CGSize(width: 31, height: 31))
         humanCharacter.physicsBody?.affectedByGravity = true
@@ -272,6 +274,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                         // makes sure the character shoots in the correct direction
                         if humanDirection == true {
                             // bullet is nil for some reason. it errors out
+                            
+                            
                             currentPosition = CGPoint(x: humanCharacter.position.x + 6, y: humanCharacter.position.y)
                             
                             bullet.physicsBody?.categoryBitMask = PhysicsCategory.bullet
@@ -312,6 +316,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                     }
                     if moveLeftButton.containsPoint(location) {
                         humanCharacter.runAction(moveLeftAction)
+                        
                         humanDirection = false
                         // to get them facing and shooting the right way
                     }
@@ -371,4 +376,4 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     
          
 }
-
+*/

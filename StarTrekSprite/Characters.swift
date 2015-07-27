@@ -28,11 +28,25 @@ import Foundation
 import SpriteKit
 
 
-class Human : SKScene, SKPhysicsContactDelegate, Player {
+class Human : SKShapeNode, Player { // this only should add properties/methods that dont already exist
     var life : Double = 10
-    var body = SKNode()
-    var shape = SKShapeNode(rectOfSize: CGSize(width: 30, height: 30))
-    var color = SKColor.whiteColor()
+    var direction : Bool = true
+   
+    override init() {
+        super.init()
+        // initalize the SKShapeNode parts of Human() here
+        self.strokeColor = SKColor.whiteColor()
+        var rect = CGRect(origin: CGPointZero, size: CGSize(width: 30, height: 30))
+        self.path = CGPathCreateWithRect(rect, nil)
+        self.position = CGPoint(x: 100,y: 100)
+        self.physicsBody = SKPhysicsBody(rectangleOfSize: CGSize(width: 30, height: 30))
+        self.physicsBody?.affectedByGravity = true
+        self.physicsBody?.dynamic = true
+        
+    }
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
     func jump() {
         self.physicsBody?.applyImpulse(CGVectorMake(0.0, 15.0))
     }
@@ -61,9 +75,8 @@ protocol Weapon {
 }
 protocol Player {
     var life : Double {get set}
-    var body : SKNode {get}
-    var shape : SKShapeNode {get}
-    var color : SKColor {get}
+   
+    var direction : Bool {get}
     func takeDamage(damage: Double)
     func moveRight()
     func moveLeft()

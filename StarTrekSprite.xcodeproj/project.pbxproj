@@ -15,6 +15,10 @@
 		8A861B941B54683200AA7CF3 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8A861B931B54683200AA7CF3 /* Images.xcassets */; };
 		8A861B971B54683200AA7CF3 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8A861B951B54683200AA7CF3 /* LaunchScreen.xib */; };
 		8A861BA31B54683200AA7CF3 /* StarTrekSpriteTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A861BA21B54683200AA7CF3 /* StarTrekSpriteTests.swift */; };
+		8A861BAF1B54695500AA7CF3 /* Characters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A861BAE1B54695500AA7CF3 /* Characters.swift */; };
+		8AC4917B1B58991D00A2202C /* Buttons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AC4917A1B58991D00A2202C /* Buttons.swift */; };
+		8ADBB8B41B65A1AD00263770 /* GameScene2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ADBB8B31B65A1AD00263770 /* GameScene2.swift */; };
+		8ADBB8B61B65CED200263770 /* PowerUps.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ADBB8B51B65CED200263770 /* PowerUps.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +44,10 @@
 		8A861B9C1B54683200AA7CF3 /* StarTrekSpriteTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StarTrekSpriteTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8A861BA11B54683200AA7CF3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8A861BA21B54683200AA7CF3 /* StarTrekSpriteTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarTrekSpriteTests.swift; sourceTree = "<group>"; };
+		8A861BAE1B54695500AA7CF3 /* Characters.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Characters.swift; sourceTree = "<group>"; };
+		8AC4917A1B58991D00A2202C /* Buttons.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Buttons.swift; sourceTree = "<group>"; };
+		8ADBB8B31B65A1AD00263770 /* GameScene2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameScene2.swift; sourceTree = "<group>"; };
+		8ADBB8B51B65CED200263770 /* PowerUps.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PowerUps.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +91,10 @@
 			children = (
 				8A861B881B54683200AA7CF3 /* AppDelegate.swift */,
 				8A861B8A1B54683200AA7CF3 /* GameScene.sks */,
+				8AC4917A1B58991D00A2202C /* Buttons.swift */,
+				8ADBB8B51B65CED200263770 /* PowerUps.swift */,
+				8A861BAE1B54695500AA7CF3 /* Characters.swift */,
+				8ADBB8B31B65A1AD00263770 /* GameScene2.swift */,
 				8A861B8C1B54683200AA7CF3 /* GameScene.swift */,
 				8A861B8E1B54683200AA7CF3 /* GameViewController.swift */,
 				8A861B901B54683200AA7CF3 /* Main.storyboard */,
@@ -222,6 +234,10 @@
 				8A861B8D1B54683200AA7CF3 /* GameScene.swift in Sources */,
 				8A861B8F1B54683200AA7CF3 /* GameViewController.swift in Sources */,
 				8A861B891B54683200AA7CF3 /* AppDelegate.swift in Sources */,
+				8ADBB8B41B65A1AD00263770 /* GameScene2.swift in Sources */,
+				8ADBB8B61B65CED200263770 /* PowerUps.swift in Sources */,
+				8A861BAF1B54695500AA7CF3 /* Characters.swift in Sources */,
+				8AC4917B1B58991D00A2202C /* Buttons.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -415,6 +431,7 @@
 				8A861BA81B54683200AA7CF3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8A861BA91B54683200AA7CF3 /* Build configuration list for PBXNativeTarget "StarTrekSpriteTests" */ = {
 			isa = XCConfigurationList;
@@ -423,6 +440,7 @@
 				8A861BAB1B54683200AA7CF3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
