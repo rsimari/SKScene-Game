@@ -136,6 +136,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     
     
     var humanCharacter = Human()
+    var powerUpYellow = PowerUp(color: SKColor.yellowColor(), position: CGPoint(x: 100, y: 100))
     
     var alienCharacter = SKShapeNode(rectOfSize: CGSize(width: 30, height: 30))
     
@@ -153,45 +154,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     var bulletSize1 = CGSize(width: 10, height: 10)
     // for special button 2
     var bulletSize2 = CGSize(width: 2, height: 10)
-    
-    
-    
-    
-    func PowerUp() {
-        powerUp = SKSpriteNode(color: SKColor.yellowColor(), size: powerUpSize)
-        powerUp.position = CGPoint(x: self.frame.midX, y: self.frame.midY)
-        powerUp.physicsBody = SKPhysicsBody(rectangleOfSize: powerUpSize)
-        powerUp.physicsBody?.categoryBitMask = PhysicsCategory.powerUp
-        powerUp.physicsBody?.collisionBitMask = 0
-        if powerUpCount <= 1 {
-            powerUp.physicsBody?.contactTestBitMask = PhysicsCategory.human
-        } else {
-            powerUp.physicsBody?.contactTestBitMask = 0
-        }
-        powerUp.physicsBody?.allowsRotation = true
-        powerUp.physicsBody?.affectedByGravity = false
-        powerUp.runAction(SKAction.repeatActionForever(rotateAction))
-        powerUp.alpha = 0.2
-        self.addChild(powerUp)
-    }
-    
-    func PowerUp2() {
-        powerUp2 = SKSpriteNode(color: SKColor.orangeColor(), size: powerUpSize)
-        powerUp2.position = CGPoint(x: self.frame.midX - 100, y: self.frame.midY)
-        powerUp2.physicsBody = SKPhysicsBody(rectangleOfSize: powerUpSize)
-        powerUp2.physicsBody?.categoryBitMask = PhysicsCategory.powerUp2
-        powerUp2.physicsBody?.collisionBitMask = 0
-        if powerUpCount <= 1 {
-            powerUp2.physicsBody?.contactTestBitMask = PhysicsCategory.human
-        } else {
-            powerUp2.physicsBody?.contactTestBitMask = 0
-        }
-        powerUp2.physicsBody?.allowsRotation = true
-        powerUp2.physicsBody?.affectedByGravity = false
-        powerUp2.runAction(SKAction.repeatActionForever(rotateAction))
-        powerUp2.alpha = 0.2
-        self.addChild(powerUp2)
-    }
+
     
     override func didMoveToView(view: SKView) {
         
@@ -219,8 +182,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         humanCharacter.physicsBody?.contactTestBitMask = PhysicsCategory.powerUp
   
         self.addChild(humanCharacter)
-        //robert.position = CGPoint(x:100,y:100)
-        //self.addChild(robert)
+        self.addChild(powerUpYellow)
         // alien
         alienCharacter.position = CGPoint(x: 400,y:100)
         alienCharacter.physicsBody = SKPhysicsBody(rectangleOfSize: CGSize(width: 30, height: 31))
@@ -254,13 +216,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         shootButton.alpha = 0.2
         self.addChild(shootButton)
         
-        // perm powerup
-        // will spawn at time intervals
-        // could make sequence that makes it move up and down
         
-        // if i want to start with powerups
-        PowerUp()
-        PowerUp2()
     }
     
     override func touchesBegan(touches: NSSet, withEvent event: UIEvent) {

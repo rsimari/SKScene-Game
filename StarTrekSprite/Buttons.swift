@@ -11,8 +11,8 @@
 import UIKit
 import Foundation
 import SpriteKit
-
-class Buttons : SKSpriteNode {
+// is this worth it?
+class Buttons : SKNode {
     
 }
 

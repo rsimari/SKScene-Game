@@ -27,6 +27,7 @@ import UIKit
 import Foundation
 import SpriteKit
 
+// add alien class with different attributes?
 
 class Human : SKShapeNode, Player { // this only should add properties/methods that dont already exist
     var life : Double = 10
@@ -66,13 +67,7 @@ class Human : SKShapeNode, Player { // this only should add properties/methods t
         weapon.fire()
     }
 }
-protocol Weapon {
-   // var bullet : SKNode {get}
-    var speedR : CGVector {get}
-    var speedL : CGVector {get}
-    func fire()
-    var damage : Double {get set}
-}
+
 protocol Player {
     var life : Double {get set}
    
@@ -82,23 +77,7 @@ protocol Player {
     func moveLeft()
     func jump()
 }
-class Phaser : Weapon {
-    var bullet = SKNode()
-    var speedR = CGVectorMake(0.3, 0)
-    var speedL = CGVectorMake(-0.3, 0)
-    var damage : Double = 1
-    func fire() {
-        // this has to put a node in the scene which is hard becasue the scene is a different file
-        // I could make the input an SKScene and put self in for the other file
-    }
-}
-class Rifle : Weapon {
-    var bullet = SKNode()
-    var speedR = CGVectorMake(5.0,0)
-    var speedL = CGVectorMake(-5.0,0)
-    var damage : Double = 2
-    func fire() {}
-}
+
 
 
 
