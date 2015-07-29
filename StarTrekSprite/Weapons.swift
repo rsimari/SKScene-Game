@@ -34,6 +34,7 @@ class Phaser : Weapon {
         }
      return bullet
         // my weapon no shootsies oopsies
+        // return self!!!! probably
     }
 }
 class Rifle : Weapon {
