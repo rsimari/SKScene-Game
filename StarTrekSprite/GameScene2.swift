@@ -31,16 +31,6 @@ import SpriteKit
 
 class GameScene: SKScene, SKPhysicsContactDelegate {
     
-    struct PhysicsCategory {
-        static let none : UInt32 = 0x1 << 1
-        static let boundary : UInt32 = 0x1 << 2 // 4
-        static let bullet : UInt32 = 0x1 << 3 // 8
-        static let alien : UInt32 = 0x1 << 4 // 16
-        static let human : UInt32 = 0x1 << 5 // 32
-        static let powerUp : UInt32 = 0x1 << 6 // 64
-        static let powerUp2 : UInt32 = 0x1 << 7 // 128
-    }
-    
     func didBeginContact(contact: SKPhysicsContact) {
         var contactItem1 : SKPhysicsBody
         var contactItem2 : SKPhysicsBody
@@ -96,12 +86,10 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             contactItem2.node!.removeFromParent() // removes powerup
             timer2 = NSTimer.scheduledTimerWithTimeInterval(8, target: self, selector: ("PowerUp2"), userInfo: nil, repeats: false)
             // start timer? ie cant last forever
-            
         }
     }
     func didEndContact(contact: SKPhysicsContact) {
         // happens everytime
-        
     }
     /*
     func explosion(victim:SKPhysicsBody) {
@@ -130,34 +118,15 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     var currentPosition : CGPoint!
     var powerUpCount : Double = 0
     
-    var bullet : SKNode!
     var bullet1 = SKShapeNode(rectOfSize: CGSize(width: 10, height: 10))
     var bullet2 = SKShapeNode(rectOfSize: CGSize(width: 2, height: 10))
     
-    
     var humanCharacter = Human()
-    var powerUpYellow = PowerUp(color: SKColor.yellowColor(), position: CGPoint(x: 100, y: 100))
+    var powerUpYellow = PowerUp(color: SKColor.yellowColor(), position: CGPoint(x: 200, y: 200))
     
     var alienCharacter = SKShapeNode(rectOfSize: CGSize(width: 30, height: 30))
     
-    var moveLeftAction = SKAction.moveByX(-30, y: 0, duration: 0.5)
-    var moveRightAction = SKAction.moveByX(30, y: 0, duration: 0.5)
-    var rotateAction = SKAction.rotateByAngle(3.14159, duration: 2)
-    // default bullet
-    var bulletSpeedR = CGVectorMake(0.3, 0)
-    var bulletSpeedL = CGVectorMake(-0.3,0)
-    var bulletSize = CGSize(width: 4, height: 2)
-    var powerUpSize = CGSize(width: 10, height: 10)
-    // for special button 1
-    var bulletSpeedR1 = CGVectorMake(5,0)
-    var bulletSpeedL1 = CGVectorMake(-5,0)
-    var bulletSize1 = CGSize(width: 10, height: 10)
-    // for special button 2
-    var bulletSize2 = CGSize(width: 2, height: 10)
-
-    
     override func didMoveToView(view: SKView) {
-        
         
         physicsWorld.contactDelegate = self
         
@@ -175,12 +144,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         self.physicsBody = sceneBody
         
         // characters
-        // human
-
-        humanCharacter.physicsBody?.categoryBitMask = PhysicsCategory.human
-        humanCharacter.physicsBody?.collisionBitMask = PhysicsCategory.boundary
-        humanCharacter.physicsBody?.contactTestBitMask = PhysicsCategory.powerUp
-  
+        
         self.addChild(humanCharacter)
         self.addChild(powerUpYellow)
         // alien
@@ -193,6 +157,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         alienCharacter.physicsBody?.collisionBitMask = PhysicsCategory.boundary | PhysicsCategory.bullet
         alienCharacter.physicsBody?.contactTestBitMask = PhysicsCategory.bullet
         self.addChild(alienCharacter)
+    
         
         // move buttons
         moveLeftButton = SKSpriteNode(color: SKColor.greenColor(), size: CGSize(width: 40, height: 25))
@@ -230,79 +195,41 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                 humanCharacter.physicsBody?.applyImpulse(CGVectorMake(0.0, 15.0))
             }
             if shootButton.containsPoint(location) {
-                
                 // shoots bullet (node)
-                
-                
                 // makes sure the character shoots in the correct direction
-                if humanCharacter.direction == true {
-                    // bullet is nil for some reason. it errors out
-                    
-                    
+                // will need to check for weapon duh
+                if humanCharacter.direction {
                     currentPosition = CGPoint(x: humanCharacter.position.x + 6, y: humanCharacter.position.y)
-                    
-                    bullet.physicsBody?.categoryBitMask = PhysicsCategory.bullet
-                    bullet.physicsBody?.collisionBitMask = PhysicsCategory.none
-                    bullet.physicsBody?.contactTestBitMask = PhysicsCategory.alien
                 } else {
                     currentPosition = CGPoint(x: humanCharacter.position.x - 6, y: humanCharacter.position.y)
-                    
-                    bullet.physicsBody?.categoryBitMask = PhysicsCategory.bullet
-                    bullet.physicsBody?.collisionBitMask = PhysicsCategory.none
-                    bullet.physicsBody?.contactTestBitMask = PhysicsCategory.alien
-                    
-                    
                 }
-                if bulletSize != CGSize(width: 4, height: 2){ // a non default bullet has been shot
-                    
-                    if bulletSize == CGSize(width: 10, height: 10) { // size of a SB bullet
-                        specialButton.removeFromParent()
-                        if specialButton.position == CGPoint(x: self.frame.maxX - 80, y: 92) { // yellow
-                            if specialButton2 != nil {
-                                specialButton2.position = CGPoint(x: self.frame.maxX - 80, y: 92) // orange
-                            }
-                        }
-                    }
-                    // this part doesnt quite work
-                    if bulletSize == CGSize(width: 2, height: 10) { // size of SB2 bullet
-                        specialButton2.removeFromParent()
-                        if specialButton2.position == CGPoint(x: self.frame.maxX - 80, y: 92) { // moving buttons down to fit the controller
-                            if specialButton != nil {
-                                specialButton.position = CGPoint(x: self.frame.maxX - 80, y: 92) // new position for the button
-                            }
-                        }
-                    }
-                    // restores to default settings if a power up shot is fired
-                }
-                
-                humanCharacter.strokeColor = SKColor.blackColor()
+                humanCharacter.weapon.fire(currentPosition, direction: humanCharacter.direction)
+            
+                humanCharacter.fillColor = SKColor.blackColor()
             }
             if moveLeftButton.containsPoint(location) {
                 humanCharacter.moveLeft()
-                
-                humanCharacter.direction = false
                 // to get them facing and shooting the right way
             }
             if moveRightButton.containsPoint(location) {
                 humanCharacter.moveRight()
-                humanCharacter.direction = true
             }
             if specialButton != nil { // button isnt created at didLoad so I keep a check in here to prevent in from erroring
                 if specialButton.containsPoint(location) {
                     // do special stuff of course
                     // depending on your color you do different stuff
                     powerUpCount--
-                    bullet.physicsBody = SKPhysicsBody(rectangleOfSize: bulletSize1)
+                   // bullet.physicsBody = SKPhysicsBody(rectangleOfSize: bulletSize1)
                     humanCharacter.strokeColor = SKColor.yellowColor()
                     if humanCharacter.direction == true {
                         bullet1.position = CGPoint(x: humanCharacter.position.x + 6, y: humanCharacter.position.y)
                         self.addChild(bullet1)
-                        bullet.physicsBody?.applyImpulse(bulletSpeedR1)
+                       // bullet.physicsBody?.applyImpulse(bulletSpeedR1)
                         specialButton.removeFromParent()
                     } else {
                         bullet2.position = CGPoint(x: humanCharacter.position.x - 6, y: humanCharacter.position.y)
                         self.addChild(bullet2)
-                        bullet.physicsBody?.applyImpulse(bulletSpeedL1)
+                       // bullet.physicsBody?.applyImpulse(bulletSpeedL1)
                         // increases bullet size woohoo!
                         // gives one shot
                         specialButton.removeFromParent()
@@ -314,30 +241,24 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                     // do special stuff of course
                     // depending on your color you do different stuff
                     powerUpCount--
-                    bullet.physicsBody = SKPhysicsBody(rectangleOfSize: bulletSize2)
+                 //   bullet.physicsBody = SKPhysicsBody(rectangleOfSize: bulletSize2)
                     humanCharacter.strokeColor = SKColor.orangeColor()
                     if humanCharacter.direction == true {
-                        bullet.position = CGPoint(x: humanCharacter.position.x + 6, y: humanCharacter.position.y)
+                 //       bullet.position = CGPoint(x: humanCharacter.position.x + 6, y: humanCharacter.position.y)
                         
                         specialButton2.removeFromParent()
                     } else {
-                        bullet.position = CGPoint(x: humanCharacter.position.x - 6, y: humanCharacter.position.y)
+                   //     bullet.position = CGPoint(x: humanCharacter.position.x - 6, y: humanCharacter.position.y)
                         
                         specialButton2.removeFromParent()
                     }
                 }
             }
         }
-        
-        
     }
-    
-    
     override func update(currentTime: CFTimeInterval) {
         /* Called before each frame is rendered */
     }
-    
-    
 }
 
 

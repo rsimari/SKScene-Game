@@ -29,20 +29,24 @@ import SpriteKit
 
 // add alien class with different attributes?
 
-class Human : SKShapeNode, Player { // this only should add properties/methods that dont already exist
+class Human : SKShapeNode, Player { // this only should add properties/methods that dont already exist in the inherited class
     var life : Double = 10
-    var direction : Bool = true
-   
+    var direction : Bool = true // necessary true me
+    var weapon : Weapon = Phaser() // current weapon yo
+    
     override init() {
         super.init()
         // initalize the SKShapeNode parts of Human() here
         self.strokeColor = SKColor.whiteColor()
-        var rect = CGRect(origin: CGPointZero, size: CGSize(width: 30, height: 30))
+        var rect = CGRect(origin: CGPointZero, size: CGSize(width: 30, height: 30)) // I think i need to fix this...
         self.path = CGPathCreateWithRect(rect, nil)
         self.position = CGPoint(x: 100,y: 100)
         self.physicsBody = SKPhysicsBody(rectangleOfSize: CGSize(width: 30, height: 30))
         self.physicsBody?.affectedByGravity = true
         self.physicsBody?.dynamic = true
+        self.physicsBody?.collisionBitMask = PhysicsCategory.boundary
+        self.physicsBody?.categoryBitMask = PhysicsCategory.human // this might need to change if theres more than one human class node
+        self.physicsBody?.contactTestBitMask = PhysicsCategory.powerUp
         
     }
     required init?(coder aDecoder: NSCoder) {
@@ -54,23 +58,19 @@ class Human : SKShapeNode, Player { // this only should add properties/methods t
     func moveRight() {
         let moveR = SKAction.moveByX(30, y: 0, duration: 0.5)
         self.runAction(moveR) // or shape?
+        direction = true
     }
     func moveLeft() {
         let moveL = SKAction.moveByX(-30, y: 0, duration: 0.5)
         self.runAction(moveL)
+        direction = false
     }
     func takeDamage(damage: Double) {
         life-=damage
     }
-    var weapon : Weapon = Phaser()
-    func shootWeapon () {
-        weapon.fire()
-    }
 }
-
 protocol Player {
     var life : Double {get set}
-   
     var direction : Bool {get}
     func takeDamage(damage: Double)
     func moveRight()

@@ -20,6 +20,8 @@
 		8ADBB8B41B65A1AD00263770 /* GameScene2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ADBB8B31B65A1AD00263770 /* GameScene2.swift */; };
 		8ADBB8B61B65CED200263770 /* PowerUps.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ADBB8B51B65CED200263770 /* PowerUps.swift */; };
 		8ADBB8B81B66EB9200263770 /* Weapons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ADBB8B71B66EB9200263770 /* Weapons.swift */; };
+		8ADBB8BA1B68675A00263770 /* Collisions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ADBB8B91B68675A00263770 /* Collisions.swift */; };
+		8ADBB8BC1B686EFD00263770 /* Bullet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ADBB8BB1B686EFD00263770 /* Bullet.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +52,8 @@
 		8ADBB8B31B65A1AD00263770 /* GameScene2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameScene2.swift; sourceTree = "<group>"; };
 		8ADBB8B51B65CED200263770 /* PowerUps.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PowerUps.swift; sourceTree = "<group>"; };
 		8ADBB8B71B66EB9200263770 /* Weapons.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Weapons.swift; sourceTree = "<group>"; };
+		8ADBB8B91B68675A00263770 /* Collisions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Collisions.swift; sourceTree = "<group>"; };
+		8ADBB8BB1B686EFD00263770 /* Bullet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Bullet.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,7 +101,9 @@
 				8A861BAE1B54695500AA7CF3 /* Characters.swift */,
 				8AC4917A1B58991D00A2202C /* Buttons.swift */,
 				8ADBB8B71B66EB9200263770 /* Weapons.swift */,
+				8ADBB8BB1B686EFD00263770 /* Bullet.swift */,
 				8ADBB8B31B65A1AD00263770 /* GameScene2.swift */,
+				8ADBB8B91B68675A00263770 /* Collisions.swift */,
 				8A861B8C1B54683200AA7CF3 /* GameScene.swift */,
 				8A861B8E1B54683200AA7CF3 /* GameViewController.swift */,
 				8A861B901B54683200AA7CF3 /* Main.storyboard */,
@@ -241,6 +247,8 @@
 				8ADBB8B61B65CED200263770 /* PowerUps.swift in Sources */,
 				8ADBB8B81B66EB9200263770 /* Weapons.swift in Sources */,
 				8A861BAF1B54695500AA7CF3 /* Characters.swift in Sources */,
+				8ADBB8BC1B686EFD00263770 /* Bullet.swift in Sources */,
+				8ADBB8BA1B68675A00263770 /* Collisions.swift in Sources */,
 				8AC4917B1B58991D00A2202C /* Buttons.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
