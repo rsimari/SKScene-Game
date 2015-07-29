@@ -14,6 +14,8 @@ class defaultBullet : SKNode { // this probably isnt necessary
         super.init()
         // this should simply create the bullet shape and physics properties
         // self.addChild(defaultBullet())
+        // var bullets : [SKNode] = []
+        // just put addChild(___)?
     }
 
     required init?(coder aDecoder: NSCoder) {
